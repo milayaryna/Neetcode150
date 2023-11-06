@@ -1,4 +1,3 @@
-# Arrays & Hashing
 # Valid Anagram
 
 '''
