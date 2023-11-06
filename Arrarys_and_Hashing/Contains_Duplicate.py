@@ -1,4 +1,3 @@
-# Arrays & Hashing
 # 217. Contains Duplicate
 
 '''
