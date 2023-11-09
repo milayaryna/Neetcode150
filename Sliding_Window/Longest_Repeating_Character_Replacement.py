@@ -30,7 +30,7 @@ class Solution:
             count[s[right]] = 1 + count.get(s[right], 0) # if can't get s[r], return 0.
             MaxSameChar = max(MaxSameChar, count[s[right]])
 
-            # can't replace the diference with character.
+            # can't replace the diference with character, move the left pointer forward.
             if (right - left + 1) - MaxSameChar > k:
                 count[s[left]] -= 1
                 left += 1
