@@ -28,7 +28,7 @@ class Solution:
         for i in range(n, len(s2)):
             if window == target:
                 return True
-						# sliding window
+	    # sliding window
             window[s2[i-n]] -= 1
             window[s2[i]] += 1
         return window == target
