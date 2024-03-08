@@ -16,3 +16,23 @@ Input: root = []
 Output: []
 '''
 
+class Solution:
+    def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
+        result = []
+        q = collections.deque([root]) # Initialize a deque with the root node
+
+        while q:
+            rightMost = None
+            
+            # In the latest loop, rightMost will be the right-most node at the current level.
+            for i in range(len(q)):
+                node = q.popleft()
+                if node:
+                    rightMost = node
+                    q.append(node.left)
+                    q.append(node.right)
+            
+            if rightMost:
+                result.append(rightMost.val)
+
+        return result
